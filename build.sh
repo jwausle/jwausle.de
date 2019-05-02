@@ -20,10 +20,10 @@ function buildDomain() {
 
    cd ${DIR}
    echo ">>>>> quasar build --mode ssr ${DIR}"
-   quasar build --mode ssr
+   quasar build
    sh ../build-sitemap.sh
-   echo ">>>>> docker build ${DIR}"
-   docker build -t jwausle/${DIR}.${DOMAIN}
+   echo ">>>>> docker build -t jwausle/${DIR}.${DOMAIN} ."
+   docker build -t jwausle/${DIR}.${DOMAIN} .
    if [ "${WITH_PUSH}" = "true" ]; then
       echo ">>>>> docker push jwausle/${DIR}.${DOMAIN}"
       docker push jwausle/${DIR}.${DOMAIN}

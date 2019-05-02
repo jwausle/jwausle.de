@@ -21,4 +21,5 @@ AWS> docker run jwausle/projects.jwausle.de
 
 ## Test
 
-open browser `https://projects.jwausle.de`
+open browser `https://projects.jwausle.de`
+

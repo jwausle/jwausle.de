@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-layout-header>
+    <q-header>
       <q-toolbar
         color="primary"
         :glossy="$q.theme === 'mat'"
@@ -67,72 +67,84 @@
           </div>
         </q-toolbar-title>
       </q-toolbar>
-    </q-layout-header>
+    </q-header>
 
-    <q-layout-drawer
+    <q-drawer
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
       <q-list
-        no-border
-        link
-        inset-delimiter
+        show-if-above
+        content-class="bg-grey-3"
       >
-        <q-list-header>Projects</q-list-header>
+        <q-item><q-item-label><b>P R O J E C T S</b></q-item-label></q-item>
+        <q-separator inset color="primary"/>
         <q-item to="/harman-elk-stack">
-          <q-item-side icon="cloud_upload" />
-          <q-item-main label="Harman" sublabel="Setup ELK stack" />
+          <q-item-section avatar><q-icon name="cloud_upload"/></q-item-section>
+          <q-item-section>Harman - Setup ELK stack</q-item-section>
         </q-item>
         <q-item to="/qivicon-osgi-software-lifecycle-managment">
-          <q-item-side icon="settings_remote" />
-          <q-item-main label="Telekom-Qivicon" sublabel="OSGi Update Managment" />
+          <q-item-section avatar><q-icon name="settings_remote"/></q-item-section>
+          <q-item-section>Telekom-Qivicon - OSGi Update Managment</q-item-section>
         </q-item>
         <q-item to="/qivicon-messaging-backend">
-          <q-item-side icon="message" />
-          <q-item-main label="Telekom-Qivicon" sublabel="AMQP Messaging Backend" />
+          <q-item-section avatar><q-icon name="message" /></q-item-section>
+          <q-item-section>Telekom-Qivicon - AMQP Messaging Backend"</q-item-section>
         </q-item>
         <q-item to="/hella-continues-integration">
-          <q-item-side icon="autorenew" />
-          <q-item-main label="Hella" sublabel="Setup CI Integrity-Jenkins" />
+          <q-item-section avatar><q-icon name="autorenew" /></q-item-section>
+          <q-item-section>Hella - Setup CI Integrity-Jenkins</q-item-section>
         </q-item>
         <q-item to="/bmw-continues-integration">
-          <q-item-side icon="autorenew" />
-          <q-item-main label="BMW" sublabel="Setup CI Git-Jenkins" />
+          <q-item-section avatar><q-icon name="autorenew" /></q-item-section>
+          <q-item-section>BMW - Setup CI Git-Jenkins</q-item-section>
         </q-item>
         <q-item to="/bosch-build-framework">
-          <q-item-side icon="transform" />
-          <q-item-main label="Bosch" sublabel="Migrate Make to BFW build" />
+          <q-item-section avatar><q-icon name="transform" /></q-item-section>
+          <q-item-section>Bosch - Migrate Make to BFW build</q-item-section>
         </q-item>
         <q-item to="/marke-intraday-trading-risk-reports">
-          <q-item-side icon="score" />
-          <q-item-main label="Mark-E" sublabel="Report Intraday trading risks" />
+          <q-item-section avatar><q-icon name="score" /></q-item-section>
+          <q-item-section>Mark-E - Report Intraday trading risks</q-item-section>
         </q-item>
         <q-item to="/swl-intraday-trading-risk-reports">
-          <q-item-side icon="score" />
-          <q-item-main label="Stadtwerke Leipzig" sublabel="Report Intraday trading risks" />
+          <q-item-section avatar><q-icon name="score" /></q-item-section>
+          <q-item-section>Stadtwerke Leipzig - Report Intraday trading risks</q-item-section>
         </q-item>
         <q-item to="/adac-pickup-order-entry-system">
-          <q-item-side icon="commute" />
-          <q-item-main label="ADAC" sublabel="Order entry system" />
+          <q-item-section avatar><q-icon name="commute" /></q-item-section>
+          <q-item-section>ADAC - Order entry system</q-item-section>
         </q-item>
+        <q-separator inset color="primary"/>
         <q-item to="/circum-vitae">
-          <q-item-side icon="home" />
-          <q-item-main label="Home" sublabel="Circum Vitae" />
+          <q-item-section avatar><q-icon name="home" /></q-item-section>
+          <q-item-section>Home - Circum Vitae</q-item-section>
         </q-item>
         <q-item to="/links">
-          <q-item-side icon="link" />
-          <q-item-main label="Links" sublabel="Zusätliche Infos" />
+          <q-item-section avatar><q-icon name="link" /></q-item-section>
+          <q-item-section>Links - Zusätliche Infos</q-item-section>
         </q-item>
       </q-list>
-    </q-layout-drawer>
+    </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
 
-    <q-layout-footer>
-      ©2019 Jan Winter - mailto://jwausle+impressum@gmail.com
-    </q-layout-footer>
+    <q-footer color="primary">
+      <q-toolbar
+        color="primary"
+        :glossy="$q.theme === 'mat'"
+        :inverted="$q.theme === 'ios'"
+      >
+        <q-toolbar-title small>
+          ©2019 Jan Winter - mailto://jwausle+impressum@gmail.com
+        </q-toolbar-title>
+        <q-btn flat class="q-py-sm" icon="img:../statics/twitter.svg" @click.native="openURL('https://twitter.com/jwausle')"/>
+        <q-btn flat class="q-py-sm" icon="img:../statics/github.svg" @click.native="openURL('https://github.com/jwausle')"/>
+        <q-btn flat class="q-py-sm" icon="img:../statics/dockerhub.png" @click.native="openURL('https://hub.docker.com/u/jwausle')"/>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -153,4 +165,7 @@ export default {
 </script>
 
 <style>
+.icon-github:before{
+  content : url("../statics/twitter.svg");
+}
 </style>

@@ -1,8 +1,8 @@
 {
-  "name": "jwausle.projects",
+  "name": "projects.jwausle.de",
   "version": "0.0.1",
-  "description": "Project history of Jan Winter for circum vitae links",
-  "productName": "jwausle.projects",
+  "description": "my projects since 2004",
+  "productName": "projects.jwausle.de",
   "cordovaId": "org.cordova.quasar.app",
   "author": "jwausle@gmail.com",
   "private": true,
@@ -10,14 +10,17 @@
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "quasar": "^1.0.0-beta.0"
+  },
   "devDependencies": {
+    "@quasar/app": "^1.0.0-beta.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.10.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^5.0.0",
-    "quasar-cli": "^0.17.0",
     "strip-ansi": "=3.0.1"
   },
   "engines": {
@@ -26,9 +29,7 @@
     "yarn": ">= 1.6.0"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 10"
+    "last 1 version, not dead, ie >= 11"
   ],
   "resolutions": {
     "ajv": "6.8.1"

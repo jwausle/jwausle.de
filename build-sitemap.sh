@@ -3,7 +3,7 @@
 # Must execute after 'quasar build'
 DOMAIN="jwausle.de"
 URL=https://$(basename $(pwd)).${DOMAIN}
-SITEMAP=dist/ssr-mat/sitemap.xml
+SITEMAP=dist/spa/sitemap.xml
 SRC="src/router/routes.js"
 DATE=`date '+%Y-%m-%dT%H:%M:%S+01:00'`
 
