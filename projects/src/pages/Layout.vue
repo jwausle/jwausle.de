@@ -59,13 +59,9 @@
                      v-on:click="$router.replace('harman-elk-stack')">
                 <q-tooltip>Harman</q-tooltip>
               </q-btn></div>
-            <div class="col-1">
-              <q-btn size="sm" dense="true"  color="primary" icon="home" label="Home"
-                     v-on:click="$router.replace('circum-vitae')">
-                <q-tooltip>Alle Projekte als CV</q-tooltip>
-              </q-btn></div>
           </div>
         </q-toolbar-title>
+        <q-btn flat round dense icon="home" v-on:click="$router.replace('circum-vitae')"/>
       </q-toolbar>
     </q-header>
 
@@ -143,6 +139,7 @@
         <q-btn flat class="q-py-sm" icon="img:../statics/twitter.svg" @click.native="openURL('https://twitter.com/jwausle')"/>
         <q-btn flat class="q-py-sm" icon="img:../statics/github.svg" @click.native="openURL('https://github.com/jwausle')"/>
         <q-btn flat class="q-py-sm" icon="img:../statics/dockerhub.png" @click.native="openURL('https://hub.docker.com/u/jwausle')"/>
+        <q-btn flat class="q-py-sm" icon="img:../statics/slideshare.svg" @click.native="openURL('https://de.slideshare.net/jwausle')"/>
       </q-toolbar>
     </q-footer>
   </q-layout>
