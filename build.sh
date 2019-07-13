@@ -32,3 +32,4 @@ function buildDomain() {
 }
 
 buildDomain "projects"
+buildDomain "root"
