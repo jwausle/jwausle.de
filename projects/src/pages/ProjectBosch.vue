@@ -5,6 +5,7 @@
         <h2>CMake to BFW migration</h2>
       </header>
       <p>
+          <img src="../assets/cv-2015-bosch.svg"/>
           <ul>
               <li><b>Auftraggeber</b> - Bosch</li>
               <li><b>Auftragszeit</b> - 2012 - 2015</li>

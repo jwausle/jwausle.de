@@ -5,6 +5,7 @@
         <h2>Setup ELK Stack</h2>
       </header>
       <p>
+          <img src="../assets/cv-2019-harman.svg"/>
           <ul>
               <li><b>Auftraggeber</b> - Harman</li>
               <li><b>Auftragszeit</b> - 2019</li>

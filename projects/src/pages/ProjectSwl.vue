@@ -5,6 +5,7 @@
         <h2>Reporting Plattform for Energy Trading Risks</h2>
       </header>
       <p>
+          <img src="../assets/cv-2009-swl.svg"/>
           <ul>
               <li><b>Auftraggeber</b> - Stadtwerke Leipzig, Mark-E</li>
               <li><b>Auftragszeit</b> - 2006 - 2011</li>

@@ -5,6 +5,7 @@
         <h2>AMQP Messaging Backend</h2>
       </header>
       <p>
+          <img src="../assets/cv-2017-qivicon.svg"/>
           <ul>
               <li><b>Auftraggeber</b> - Deutsche Telekom - Qivicon</li>
               <li><b>Auftragszeit</b> - 2016-2017</li>

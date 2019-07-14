@@ -5,6 +5,7 @@
         <h2>OSGi Update Management</h2>
       </header>
       <p>
+          <img src="../assets/cv-2018-qivicon.svg"/>
           <ul>
               <li><b>Auftraggeber</b> - Deutsche Telekom - Qivicon</li>
               <li><b>Auftragszeit</b> - 2017-2018</li>

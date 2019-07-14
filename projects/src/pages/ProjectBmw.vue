@@ -5,6 +5,7 @@
         <h2>Continues Integration und -Release mit Jenkins</h2>
       </header>
       <p>
+          <img src="../assets/cv-2016-bmw.svg"/>
           <ul>
               <li><b>Auftraggeber</b> - BMW</li>
               <li><b>Auftragszeit</b> - 2015/2016</li>

@@ -4,6 +4,7 @@
 
 DOMAIN="jwausle.de"
 WITH_PUSH="false"
+BUILDED=""
 
 ARGS="$*"
 
@@ -13,14 +14,19 @@ fi
 
 function buildDomain() {
    DIR=$1
+   WITH_SSR=""
+   if [ "$2" == "--ssr" ] ; then
+     WITH_SSR="--mode ssr"
+   fi
+
    if [[ "${ARGS}" = *"--skip-${DIR}"* ]]; then
       echo ">>>>> skip building of ${DIR}"
       return 0
    fi
 
    cd ${DIR}
-   echo ">>>>> quasar build --mode ssr ${DIR}"
-   quasar build
+   echo ">>>>> quasar build ${WITH_SSR} ${DIR}"
+   quasar build ${WITH_SSR}
    sh ../build-sitemap.sh
    echo ">>>>> docker build -t jwausle/${DIR}.${DOMAIN} ."
    docker build -t jwausle/${DIR}.${DOMAIN} .
@@ -31,5 +37,14 @@ function buildDomain() {
    cd ..
 }
 
-buildDomain "projects"
-buildDomain "root"
+if [[ $* = *"--projects"* ]]; then
+  buildDomain "projects" # "--ssr" 
+  BUILDED="projects "
+fi
+if [[ $* = *"--push"* ]]; then
+  buildDomain "root"
+  BUILDED="root "
+fi
+if [ "${BUILDED}" == "" ] ; then
+  echo "No subdomain was build. Set --projects and/or --root to build one."
+fi

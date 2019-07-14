@@ -5,6 +5,7 @@
         <h2>Pickup order entry system</h2>
       </header>
       <p>
+          <img src="../assets/cv-2004-adac-ahheil.svg"/>
           <ul>
               <li><b>Auftraggeber</b> - Autohaus Heil in Leipzig</li>
               <li><b>Auftragszeit</b> - 2004 bis 2008</li>
