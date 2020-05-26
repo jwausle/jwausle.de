@@ -41,7 +41,7 @@ if [[ $* = *"--projects"* ]]; then
   buildDomain "projects" # "--ssr" 
   BUILDED="projects "
 fi
-if [[ $* = *"--push"* ]]; then
+if [[ $* = *"--root"* ]]; then
   buildDomain "root"
   BUILDED="root "
 fi
